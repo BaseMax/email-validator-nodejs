@@ -2,6 +2,12 @@
 
 This is a simple email validator for NodeJS that can match all emails in a string, check if a string has an email address, or check if a string includes a specific email address. You can use this module to validate emails in your NodeJS projects.
 
+## Features
+
+- Match all emails in a string
+- Check a specific email address in a string
+- Check if a string has at least one email address
+
 ## Example
 
 Import the module:
