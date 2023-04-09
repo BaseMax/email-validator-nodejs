@@ -1,4 +1,5 @@
 const REGEX = /([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})\b/g;
+const EXACT_REGEX = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})\b$/g;
 
 // Return an array from all emails address inside the input text
 const match = (text) => {
@@ -15,9 +16,15 @@ const includes = (text, email) => {
     return match(text).includes(email);
 };
 
+// Return true if the input text match only one email address without any other characters or whitespaces
+const exact = (text) => {
+    return EXACT_REGEX.test(text);
+};
+
 // Export the functions
 module.exports = {
     match,
     includes,
-    has
+    has,
+    exact
 };
