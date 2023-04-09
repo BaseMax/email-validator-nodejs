@@ -1,6 +1,8 @@
 // javascript
-const REGEX = /([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})/g;
-// info@google.com... is an invalid email but we should detect `info@google.com` as an email and not `info@google.com...`.
+// const REGEX = /([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})/g;
+// const REGEX = /([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})(?!\.)/g;
+const REGEX = /([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})\b/g;
+// "info@google.com..."" is an invalid email but we should detect `info@google.com` as an email and not `info@google.com...`.
 
 // Return an array from all emails address inside the input text
 const match = (text) => {
