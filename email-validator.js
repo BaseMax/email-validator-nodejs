@@ -7,7 +7,7 @@ const match = (text) => {
 
 // Return true if the input text has at least one email address
 const has = (text) => {
-    return (new Array(match(text)).length) > 0;
+    return REGEX.test(text);
 };
 
 // Return true if the input text includes the email address
