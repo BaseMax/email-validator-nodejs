@@ -1,6 +1,6 @@
 # email-validator-nodejs
 
-This is 
+This is a simple email validator for NodeJS that can match all emails in a string, check if a string has an email address, or check if a string includes a specific email address. You can use this module to validate emails in your NodeJS projects.
 
 ## Example
 
