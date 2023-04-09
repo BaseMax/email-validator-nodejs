@@ -13,7 +13,10 @@ const has = (text) => {
 
 // Return true if the input text includes the email address
 const includes = (text, email) => {
-    return match(text).includes(email);
+    const matches = match(text);
+
+    if (!matches) return false;
+    return matches.includes(email);
 };
 
 // Return true if the input text match only one email address without any other characters or whitespaces
